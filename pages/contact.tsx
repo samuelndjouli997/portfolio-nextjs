@@ -12,6 +12,7 @@ const Contact = () => {
     const [user_name, setUser_name] = useState("");
     const [user_email, setUser_email] = useState("");
     const [user_message, setUser_message] = useState("");
+    const [showSuccess, setShowSuccess] = useState(false);
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
@@ -23,12 +24,19 @@ const Contact = () => {
             message: user_message
         }
 
+
         emailjs.send('service_fjuty4i', 'template_pz3rz45', emailContent, 'OH9eZRCqTbnO-1dmt')
             .then((result) => {
                 console.log(result.text);
+
             }, (error) => {
                 console.log(error.text);
             });
+
+        setUser_name("");
+        setUser_email("");
+        setUser_message("");
+        setShowSuccess(true);
 
     }
 
@@ -78,11 +86,13 @@ const Contact = () => {
                                 className="input"
                                 type="text"
                                 placeholder="Votre nom"
+                                value={user_name}
                                 onChange={(e) => setUser_name(e.target.value)}
                             />
                             <input
                                 className="input"
                                 type="email"
+                                value={user_email}
                                 placeholder="Votre email"
                                 onChange={(e) => setUser_email(e.target.value)}
                             />
@@ -90,14 +100,20 @@ const Contact = () => {
 
                         <textarea
                             className="textarea"
+                            value={user_message}
                             placeholder="Un p'tit message ? 👋"
                             onChange={(e) => setUser_message(e.target.value)}
                         ></textarea>
                         <button className="btn btn-lg bg-primary/90 hover:bg-primary text-white">
                             Envoyer
                         </button>
+                        {
+                            showSuccess && <div className="px-4 py-5 text-center max-w-md bg-green-400 text-green-900 rounded-xl">Votre mail a bien été envoyé ! 🚀</div>
+                        }
                     </form>
+
                 </div>
+
             </div>
         </Layout>
     )
