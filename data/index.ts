@@ -7,7 +7,7 @@ export const projectLinks = [
         url: "/img/portfolio/metaversus-img.png",
         title: "Metaversus",
         content: "Une landing page Jamstack, Génération de site statique (SSG) avec Next.js, TailwindCSS et Framer-Motion pour les animations",
-        link: "#",
+        link: "https://metaversus-app-chi.vercel.app/",
         img: {
             stack1: "/img/technos/next-js-logo.png",
             stack2: "/img/technos/react-logo.png",
@@ -49,7 +49,7 @@ export const projectLinks = [
         url: "/img/portfolio/hoobank-img.png",
         title: "Hoobank",
         content: "Un site responsive et performant réalisé dans le cadre de mon alternance",
-        link: "#",
+        link: "https://modern-bank-app-psi.vercel.app/",
         img: {
             stack1: "/img/technos/react-logo.png",
             stack2: "/img/technos/tailwindcss-logo.png",
