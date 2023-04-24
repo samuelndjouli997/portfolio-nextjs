@@ -55,7 +55,7 @@ const Contact = () => {
                             <div>
                                 <h4 className="text-xl mb-1 font-bold">Adresse mail</h4>
                                 <p className="mb-1">Envie de me joindre directement par mail ?</p>
-                                <p className="font-normal">mon adresse mail : samuelndj.997@gmail.com</p>
+                                <p className="font-normal">Mon adresse mail : samuelndj.997@gmail.com</p>
                             </div>
                         </div>
                         <div className="flex flex-col lg:flex-row gap-x-4">

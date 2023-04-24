@@ -42,16 +42,16 @@ const MobileNav = ({ setNavMobile }: Props) => {
       {/* menu list */}
       <ul className="text-xl flex flex-col gap-y-8 text-white">
         <li>
-          <Link href="/">Home</Link>
+          <Link onClick={() => setNavMobile(false)} href="/">Home</Link>
         </li>
         <li>
-          <Link href="/about">About</Link>
+          <Link onClick={() => setNavMobile(false)} href="/about">About</Link>
         </li>
         <li>
-          <Link href="/portfolio">Portfolio</Link>
+          <Link onClick={() => setNavMobile(false)} href="/portfolio">Portfolio</Link>
         </li>
         <li>
-          <Link href="/contact">Contact</Link>
+          <Link onClick={() => setNavMobile(false)} href="/contact">Contact</Link>
         </li>
       </ul>
 
